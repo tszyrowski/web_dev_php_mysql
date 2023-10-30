@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Primer - Index</title>
+    <title>PHP Primer - <?php echo $title ?></title>
 </head>
 <body>
     <h1>Hello World - PHP Primer</h1>

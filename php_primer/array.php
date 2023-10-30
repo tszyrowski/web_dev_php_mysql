@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>Arrays</h1>
+<?php
+    $title = "Arrays";
+    include 'includes/header.php';
+?>
+    <h1><?php echo $title ?></h1>
     <?php
         // A variable
         $num = 3;

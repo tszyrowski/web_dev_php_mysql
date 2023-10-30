@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>While Loop</h1>
+<?php 
+    $title = "While/Do-While Loop";
+    include 'includes/header.php';
+?>
+    <h1><?php echo $title ?></h1>
     <?php
         $grade = 0;
         while($grade < 5) {

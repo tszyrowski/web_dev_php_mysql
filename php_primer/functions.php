@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>Functions</h1>
+<?php 
+    $title = "Functions";
+    include 'includes/header.php';
+?>
+    <h1><?php echo $title ?></h1>
     <?php
         /* Defining a Function */
         function writeMessage(){

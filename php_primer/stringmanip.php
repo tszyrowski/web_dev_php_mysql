@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>String Manipulation</h1>
+<?php 
+    $title = "String Manipulation";
+    include 'includes/header.php'; 
+?>
+    <h1><?php echo $title ?></h1>
     <?php 
         $phrase1 = "student who came late";
         $phrase2 = "in class, stand with Rock";

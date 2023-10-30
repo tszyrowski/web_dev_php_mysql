@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>Switch Statement</h1>
+<?php 
+    $title = "Switch Statement";
+    include 'includes/header.php'; 
+?>
+    <h1><?php echo $title ?></h1>
     <form action="switchstatement.php" method="post">
         <label for="grade">Enter Your Grade: </label>
         <input type="text" name="grade" id="grade">

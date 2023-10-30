@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+    $title = "For Loop";
+    include 'includes/header.php'; 
+?>
     <h3 style="color: red">Presents the looping and session counter<br>
     It evaluates session on each time and both columns change accordingly</h3>
     <div style="display: flex;">

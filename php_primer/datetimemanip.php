@@ -1,5 +1,8 @@
-<?php include 'includes/header.php'; ?>
-    <h1>Date and Time Manipulation</h1>
+<?php 
+    $title = "Date and Time Manipulation";
+    include 'includes/header.php';
+?>
+    <h1><?php echo $title ?></h1>
     <?php
         echo '<h2>Today\'s Date</h2>';
         $datenow = getdate();

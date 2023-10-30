@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+    $title = "Index";
+    include 'includes/header.php';
+?>
 
     <?php 
         //Printing to HTML using echo
