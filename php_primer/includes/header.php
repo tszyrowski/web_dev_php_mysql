@@ -8,17 +8,18 @@
     <title>PHP Primer - <?php echo $title ?></title>
 </head>
 <body>
+    <div class="container">
     <h1>Hello World - PHP Primer</h1>
     <!-- Basic PHO -->
     <!-- To get command Ctrl+k+c -->
     <h2>Follow each link to the page example</h2>
-    <ul>
-        <li><a href="array.php">Simple Array and Printouts</a></li>
-        <li><a href="forloop.php">Simple For Loop</a></li>
-        <li><a href="whiledowhileloop.php">Simple While/Do While Loop</a></li>
-        <li><a href="ifstatement.php">Simple If Statement</a></li>
-        <li><a href="switchstatement.php">Simple Switch Statement</a></li>
-        <li><a href="stringmanip.php">Simple String Manipulation</a></li>
-        <li><a href="datetimemanip.php">Simple Date and Time Manipulation</a></li>
-        <li><a href="functions.php">Simple Functions</a></li>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"><a class="nav-link" href="array.php">Simple Array and Printouts</a></li>
+        <li class="nav-item"><a class="nav-link" href="forloop.php">Simple For Loop</a></li>
+        <li class="nav-item"><a class="nav-link" href="whiledowhileloop.php">Simple While/Do While Loop</a></li>
+        <li class="nav-item"><a class="nav-link" href="ifstatement.php">Simple If Statement</a></li>
+        <li class="nav-item"><a class="nav-link" href="switchstatement.php">Simple Switch Statement</a></li>
+        <li class="nav-item"><a class="nav-link" href="stringmanip.php">Simple String Manipulation</a></li>
+        <li class="nav-item"><a class="nav-link" href="datetimemanip.php">Simple Date and Time Manipulation</a></li>
+        <li class="nav-item"><a class="nav-link" href="functions.php">Simple Functions</a></li>
     </ul>
