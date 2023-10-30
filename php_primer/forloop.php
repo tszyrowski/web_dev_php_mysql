@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Primer - FOR LOOP</title>
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
     <h3 style="color: red">Presents the looping and session counter<br>
     It evaluates session on each time and both columns change accordingly</h3>
     <div style="display: flex;">
@@ -80,5 +73,4 @@
             ?>
         </div>
     </div>
-</body>
-</html>
+<?php require 'includes/footer.php'; ?>

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Primer - String manipulation</title>
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
     <h1>String Manipulation</h1>
     <?php 
         $phrase1 = "student who came late";
@@ -41,5 +34,4 @@
         echo '<hr/>';
     ?>
     
-</body>
-</html>
+<?php require 'includes/footer.php'; ?>

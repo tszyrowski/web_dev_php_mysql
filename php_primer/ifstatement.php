@@ -152,5 +152,4 @@
         <h2 id="result"></h2>
     </form>
     
-</body>
-</html>
+<?php require 'includes/footer.php'; ?>

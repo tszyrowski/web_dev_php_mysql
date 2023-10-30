@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<h, initial-scale=1.0">
-    <title>PHP Primer - While Loops</title>
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
     <h1>While Loop</h1>
     <?php
         $grade = 0;
@@ -24,5 +17,4 @@
         } while($grade < 5);
         echo '<h2>EXIT LOOP!</h2>';
     ?>   
-</body>
-</html>
+<?php require 'includes/footer.php'; ?>

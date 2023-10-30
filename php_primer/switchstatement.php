@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Primer - Switch Statement</title>
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
     <h1>Switch Statement</h1>
     <form action="switchstatement.php" method="post">
         <label for="grade">Enter Your Grade: </label>
@@ -27,5 +20,4 @@
                 break;
         }
     ?>
-</body>
-</html>
+<?php require 'includes/footer.php'; ?>
