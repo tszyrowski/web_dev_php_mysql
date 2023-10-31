@@ -4,6 +4,9 @@ copy_first:
 copy_primer:
 	cp -r php_primer /opt/lampp/htdocs/
 
+copy_attendance:
+	cp -r attendance /opt/lampp/htdocs/
+
 start_lampp:
 	# Try to start lampp
 	-sudo /opt/lampp/lampp start 2>&1 | tee /tmp/lampp_start_output
