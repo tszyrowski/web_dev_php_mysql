@@ -22,7 +22,7 @@
 
     <select class="form-select" aria-label="Default select example" name="specialty">
         <option selected>Specialty</option>
-        <option value="Database Admin">Database Admin</option>
+        <option value="1">Database Admin</option>
         <option value="Software Dev">Software Dev</option>
         <option value=Other">Other</option>
     </select>

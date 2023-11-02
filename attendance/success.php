@@ -1,8 +1,29 @@
 <?php 
     $title = "Success";
     require_once './includes/header.php'; 
+    require_once './db/conn.php';
+
+    if(isset($_POST['submit'])){
+        //extract values from the $_POST array
+        $fname = $_POST['firstname'];
+        $lname = $_POST['lastname'];
+        $dob = $_POST['dob'];
+        $email = $_POST['email'];
+        $contact = $_POST['phone'];
+        $specialty = $_POST['specialty'];
+
+        //Call function to insert and track if success or not
+        $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
+
+        if($isSuccess){
+            echo '<h1 class="text-center text-success">You have been submitted</h1>';
+        }
+        else{
+            echo '<h1 class="text-center text-danger">There was an error in processing</h1>';
+        }
+    }
 ?>
- <h1 class="text-center text-success">You have been submitted</h1>
+
 
  <?php echo $_SERVER['REQUEST_METHOD']; ?>
  <!-- <div class="card" style="width: 18rem;">
