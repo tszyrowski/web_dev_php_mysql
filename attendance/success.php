@@ -47,8 +47,13 @@
     <h5 class="card-title">
         <?php echo $_POST['firstname']." ".$_POST['lastname']; ?>
     </h5>
+    <!-- Display specialty name based on ID. The name read from db -->
     <h6 class="card-subtitle mb-2 text-body-secondary">
-        <?php echo $_POST['specialty']; ?>
+        <?php 
+            $sid = $_POST['specialty'];
+            $specialty = $crud->getSpecialtyById($sid);
+            echo $specialty['specialty_name'];
+        ?>
     </h6>
     <p class="card-text">
         <?php echo 'Date of Birth: '.$_POST['dob']; ?>
