@@ -77,6 +77,21 @@
                 return false;
             }      
         }
+
+        public function deleteAttendee($id){
+            try {
+                // update details of attendee in db based on attendee id
+                $sql = "DELETE FROM attende WHERE `attende`.`attendee_id` = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id',$id);
+                $stmt->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }      
+        }        
+
         public function getSpecialties(){
             try {
                 $sql = "SELECT * FROM `specialties` ";
