@@ -6,7 +6,8 @@
     $specialty = $crud->getSpecialties();
     
     if(!isset($_GET['id'])){
-        echo '<h1 class="text-center text-danger">Please check details and try again</h1>';
+        include './includes/error_msg.php';
+        header("Location: viewrecords.php");
     }else{
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);

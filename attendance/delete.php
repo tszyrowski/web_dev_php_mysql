@@ -15,7 +15,7 @@
             header("Location: viewrecords.php");
         }
         else{
-            echo '<h1 class="text-center text-danger">There was an error in processing</h1>';
+            include './includes/error_msg.php';
         }
     }
 ?>
