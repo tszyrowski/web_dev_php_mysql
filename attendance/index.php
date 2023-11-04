@@ -11,7 +11,7 @@
     <form method="post" action="success.php">
     <div class="mb-3">
         <label for="firstname" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="firstname" name="firstname">
+        <input required type="text" class="form-control" id="firstname" name="firstname">
     </div>
     <div class="mb-3">
         <label for="lastname" class="form-label">Last Name</label>
@@ -19,7 +19,7 @@
     </div>
     <div class="mb-3">
         <label for="dob" class="form-label">Date of Birth</label>
-        <input type="text" class="form-control" id="dob" name="dob">
+        <input required type="text" class="form-control" id="dob" name="dob">
     </div>
 
     <select class="form-select" aria-label="Default select example" name="specialty">
