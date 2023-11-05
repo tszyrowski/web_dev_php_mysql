@@ -41,8 +41,6 @@
             ?>
             <a class="nav-link active" aria-current="page" href="login.php">Login<span class="sr-only">(current)</span></a>
         <?php } else { ?>
-            
-            
             <a class="nav-link active" aria-current="page" href="#">
               <span>Hello <?php echo $_SESSION['username'] ?>!</span>
               <span class="sr-only">(current)</span>
