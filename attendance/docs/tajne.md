@@ -1,3 +1,15 @@
+# Hosting
+
+000webhosting.com
+login: tszyrowski@gmail.com
+haslo: Priv#000.kAceliro,7
+
+### host:
+https://panel.000webhost.com/dashboard/huffiest-individual/databases
+
+### accessible from website:
+https://huffiest-individual.000webhostapp.com/
+
 
 # DB
 

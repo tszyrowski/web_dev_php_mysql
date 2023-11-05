@@ -1,3 +1,6 @@
+<?php
+  include_once 'session.php';
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +16,10 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Add cross-eye for password view -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="container">
@@ -27,6 +34,22 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         <a class="nav-link" href="viewrecords.php">View attendees</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <?php
+          if(!isset($_SESSION['userid'])){
+            ?>
+            <a class="nav-link active" aria-current="page" href="login.php">Login<span class="sr-only">(current)</span></a>
+        <?php } else { ?>
+            
+            
+            <a class="nav-link active" aria-current="page" href="#">
+              <span>Hello <?php echo $_SESSION['username'] ?>!</span>
+              <span class="sr-only">(current)</span>
+            </a>  
+            <a class="nav-link active" aria-current="page" href="logout.php">LogOut<span class="sr-only">(current)</span></a>      
+        <?php  }?>
+        </a>
       </div>
     </div>
   </div>
