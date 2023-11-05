@@ -1,18 +1,18 @@
-<?php 
-    $title = "Edit Record";
-    require_once 'includes/header.php'; 
-    require_once 'includes/auth_check.php';
-    require_once 'db/conn.php';
+<?php
+$title = "Edit Record";
+require_once 'includes/header.php';
+require_once 'includes/auth_check.php';
+require_once 'db/conn.php';
 
-    $specialty = $crud->getSpecialties();
-    
-    if(!isset($_GET['id'])){
-        include './includes/error_msg.php';
-        header("Location: viewrecords.php");
-    }else{
-        $id = $_GET['id'];
-        $attendee = $crud->getAttendeeDetails($id);
-?>
+$specialty = $crud->getSpecialties();
+
+if(!isset($_GET['id'])) {
+    include './includes/error_msg.php';
+    header("Location: viewrecords.php");
+} else {
+    $id = $_GET['id'];
+    $attendee = $crud->getAttendeeDetails($id);
+    ?>
    
     <h1 class="text-center">Edit Record</h1>
 
@@ -35,7 +35,9 @@
 
         <?php while ($row = $specialty->fetch(PDO::FETCH_ASSOC)) { ?>
             <option value="<?php echo $row['specialty_id']; ?>"<?php if($row['specialty_id'] ==
-            $attendee['specialty_id']) echo 'selected' ?> >
+                $attendee['specialty_id']) {
+                echo 'selected';
+            } ?> >
                 <?php echo $row['specialty_name']; ?>
             </option>
         <?php } ?>

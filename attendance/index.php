@@ -1,9 +1,9 @@
-<?php 
-    $title = "Home";
-    require_once 'includes/header.php'; 
-    require_once 'db/conn.php';
+<?php
+$title = "Home";
+require_once 'includes/header.php';
+require_once 'db/conn.php';
 
-    $specialty = $crud->getSpecialties();
+$specialty = $crud->getSpecialties();
 ?>
    
     <h1 class="text-center">Registration for conference</h1>

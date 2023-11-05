@@ -1,24 +1,24 @@
-<?php 
-    $title = "login";
-    require_once './includes/header.php'; 
-    require_once './db/conn.php';
+<?php
+$title = "login";
+require_once './includes/header.php';
+require_once './db/conn.php';
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $username = strtolower(trim($_POST['username']));
-        $password = $_POST['password'];
-        $new_password = md5($password.$username);
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = strtolower(trim($_POST['username']));
+    $password = $_POST['password'];
+    $new_password = md5($password.$username);
 
-        $result = $user->getUser($username, $new_password);
+    $result = $user->getUser($username, $new_password);
 
-        if(!$result){
-            echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
-        }else{
-            $_SESSION['username'] = $username;
-            $_SESSION['userid'] = $result['id'];
-            header("Location: viewrecords.php");
-        }
-    
+    if(!$result) {
+        echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
+    } else {
+        $_SESSION['username'] = $username;
+        $_SESSION['userid'] = $result['id'];
+        header("Location: viewrecords.php");
     }
+
+}
 ?>
 
 <h1 class="text-center"><?php echo $title ?></h1>
@@ -30,12 +30,15 @@
             <td>
                 <input 
                     type="text" name="username" id="username" class="form-control" 
-                    value="<?php 
-                        if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username']; 
-                    ?>"
+                    value="<?php
+                        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            echo $_POST['username'];
+                        }
+?>"
                 >
-                <?php if(empty($_POST['username']) && $_SERVER['REQUEST_METHOD'] == 'POST') 
-                echo '<p class="text-danger">Please enter a username</p>'; ?>
+                <?php if(empty($_POST['username']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+                    echo '<p class="text-danger">Please enter a username</p>';
+                } ?>
             </td>
         </tr>
 
@@ -48,15 +51,18 @@
                     id="password" 
                     class="form-control"
                     style="padding-right: 30px;" 
-                    value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo htmlspecialchars($_POST['password']); ?>"
+                    value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        echo htmlspecialchars($_POST['password']);
+                    } ?>"
                 >
                 <i 
                     id="togglePassword" 
                     class="fas fa-eye" 
                     style="position: absolute; right: 10px; top: 10px; cursor: pointer;">
                 </i>
-                <?php if(empty($_POST['password']) && $_SERVER['REQUEST_METHOD'] == 'POST') 
-                echo '<p class="text-danger">Please enter a password</p>'; ?>
+                <?php if(empty($_POST['password']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+                    echo '<p class="text-danger">Please enter a password</p>';
+                } ?>
             </td>
         </tr>
 

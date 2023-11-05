@@ -1,5 +1,5 @@
 <?php
-  include_once 'session.php';
+include_once 'session.php';
 ?> 
 <!doctype html>
 <html lang="en">
@@ -37,8 +37,8 @@
       </div>
       <div class="navbar-nav ms-auto">
         <?php
-          if(!isset($_SESSION['userid'])){
-            ?>
+          if(!isset($_SESSION['userid'])) {
+              ?>
             <a class="nav-link active" aria-current="page" href="login.php">Login<span class="sr-only">(current)</span></a>
         <?php } else { ?>
             <a class="nav-link active" aria-current="page" href="#">
