@@ -12,8 +12,15 @@ if(isset($_POST['submit'])) {
     $contact = $_POST['phone'];
     $specialty = $_POST['specialty'];
 
+    $orig_file = $_FILES["avatar"]["tmp_name"];
+    // upload file wth unique name so avatars are not mixed up
+    $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+    $target_dir = 'uploads/';
+    $target_file = $target_dir.$contact.$fname.$lname .".".$ext;
+    move_uploaded_file($orig_file, $target_file);
+
     //Call function to insert and track if success or not
-    $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
+    $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty, $target_file);
 
     if($isSuccess) {
         require_once './includes/success_msg.php';
@@ -23,24 +30,7 @@ if(isset($_POST['submit'])) {
 }
 ?>
 
-
- <?php echo $_SERVER['REQUEST_METHOD']; ?>
- <!-- <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">
-        <?php //echo $_GET['firstname']." ".$_GET['lastname'];?>
-    </h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">
-        <?php // echo $_GET['specialty'];?>
-    </h6>
-    <p class="card-text">
-        <?php //echo 'Date of Birth: '.$_GET['dob'];?>
-    </p>
-    <p class="card-text">
-        Contact: <?php //echo ' '.$_GET['phone'].'; '.$_GET['email'].'.';?>
-    </p>
-  </div>
-</div> -->
+<img src="<?php echo $target_file; ?>" class="rounded-circle" style="width: 20%; height: 20%" />
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">
